@@ -1,5 +1,5 @@
 <?php
-include("config.inc.php");
+include("config.inc.php");//inclui o arquivo 
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
