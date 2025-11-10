@@ -1,0 +1,99 @@
+/* ------------------------------
+   RESET GERAL
+   Remove margens, espaçamentos e ajusta a fonte
+------------------------------- */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamento interno padrão */
+    box-sizing: border-box; /* Faz com que padding e borda sejam incluídos no tamanho total dos elementos */
+    font-family: "Poppins", sans-serif; /* Define a fonte da página */
+}
+
+/* ------------------------------
+   CORPO (BODY)
+   Define o fundo e centraliza o container
+------------------------------- */
+body {
+    height: 100vh; /* Ocupa toda a altura da tela */
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #2e2e2e); /* Fundo em degradê escuro */
+    display: flex; /* Usa Flexbox para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* ------------------------------
+   CONTAINER (JANELA DE CADASTRO)
+   Janela principal com efeito vidro e bordas suaves
+------------------------------- */
+.container {
+    backdrop-filter: blur(15px); /* EMBASSA o que está atrás (efeito vidro) */
+    -webkit-backdrop-filter: blur(15px); /* Versão para Safari para rodar em todos os dispositivos*/
+    background: rgba(255, 255, 255, 0.05); /* TRANSPARÊNCIA leve no fundo */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* BORDA suave translúcida */
+    border-radius: 30px; /* Arredonda os cantos */
+    padding: 40px; /* Espaçamento interno */
+    width: 650px; /* Largura fixa da janela */
+    color: rgb(32, 190, 15); /* Cor do texto */
+    text-align: center; /* Centraliza texto e conteúdo */
+    box-shadow: 0 0 20px rgba(0, 255, 128, 0.2); /* Sombra suave esverdeada */
+    transition: 0.4s; /* Transição suave para efeitos (como hover) */
+}
+
+/* ------------------------------
+   EFEITO AO PASSAR O MOUSE (HOVER)
+   Faz o brilho aumentar ao passar o mouse
+------------------------------- */
+.container:hover {
+    box-shadow: 0 0 40px rgba(0, 255, 128, 0.455); /* Aumenta o brilho da sombra */
+}
+
+/* ------------------------------
+        TÍTULO (H2)
+------------------------------- */
+h2 {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #00ff99; /* Cor verde neon */
+}
+
+/* ------------------------------
+   CAMPOS DE TEXTO E TEXTAREA
+------------------------------- */
+input, textarea {
+    width: 100%; /* Ocupa toda a largura do container */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Espaço entre os campos */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Arredonda os cantos dos campos */
+    background: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    outline: none; /* Remove o contorno ao clicar */
+}
+
+/* Impede que o textarea seja redimensionado */
+textarea {
+    resize: none;
+}
+
+/* ------------------------------
+              BOTÃO
+------------------------------- */
+button {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Altura do botão */
+    margin-top: 10px; /* Espaço acima do botão */
+    background: #00ff99; /* Cor de fundo verde neon */
+    border: none; /* Remove borda */
+    border-radius: 8px; /* Cantos arredondados */
+    color: #000; /* Cor do texto do botão */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Muda o cursor para “mãozinha” */
+    transition: 0.3s; /* Transição suave ao mudar de cor */
+}
+
+/* ------------------------------
+   BOTÃO (HOVER)
+   Muda de cor quando o mouse passa por cima
+------------------------------- */
+button:hover {
+    background: #02f091; /* Verde mais escuro no hover */
+}
