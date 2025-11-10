@@ -1,6 +1,6 @@
 <?php
-$nome = $_GET['nome'] ?? 'Usuário';
-$objetivo = $_GET['objetivo'] ?? 'Sem objetivo definido';
+$nome = $_GET['nome'] ?? 'Usuário';/*pega o nome na URL ou define um padrão*/
+$objetivo = $_GET['objetivo'] ?? 'Sem objetivo definido';/*pega o objetivo na URL ou define um padrão*/
 ?>
 
 <!DOCTYPE html>
@@ -10,42 +10,49 @@ $objetivo = $_GET['objetivo'] ?? 'Sem objetivo definido';
     <title>Habit Tracker</title>
     <link rel="stylesheet" href="estilo.css">
     <style>
-        body {
+        body { // Estilo para o corpo da página
             display: flex;
             justify-content: space-evenly;
             align-items: start;
             padding-top: 50px;
         }
 
-        .tabela, .painel {
-            backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 15px;
-            padding: 20px;
-            color: white;
-            box-shadow: 0 0 20px rgba(0, 255, 128, 0.3);
-            width: 40%;
-            height: 70vh;
-            overflow-y: auto;
+        .tabela, .painel { /*Estilo para a tabela e o painel*/
+            backdrop-filter: blur(20px); /*Deixa o fundo borrado*/
+            -webkit-backdrop-filter: blur(20px); /* Versão para Safari */
+            background: rgba(255, 255, 255, 0.08);/* Fundo translúcido */
+            border-radius: 15px;/* Arredonda os cantos */
+            padding: 20px;/* Espaçamento interno */
+            color: white;/* Cor do texto */
+            box-shadow: 0 0 20px rgba(0, 255, 128, 0.3);/* Sombra suave */
+            width: 40%;/* Largura */
+            height: 70vh;/* Altura */
+            overflow-y: auto;/* Adiciona barra de rolagem vertical se necessário */
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
+        table {/* Estilo para a tabela */
+            width: 100%;/* Largura total da tabela */
+            border-collapse: collapse;/* Remove espaçamento entre células */
+            text-align: center;/* Centraliza o texto */
         }
 
-        th, td {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        th, td {/* Estilo para cabeçalhos e células */
+            padding: 10px;/* Espaçamento interno */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);/* Linha inferior suave */
         }
 
-        th {
-            color: #00ff99;
+        th {/* Estilo para cabeçalhos */
+            color: #00ff99;/* Cor verde clara */
         }
     </style>
 </head>
 <body>
+
+
+
+
+
+
 
     <div class="tabela">
         <h2>📅 Metas do Habit Tracker</h2>
